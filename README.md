@@ -39,3 +39,6 @@ This notebook retrieves and processes the following datasets for each state:
 
 ## Acknowledgments
 FRED API: This notebook uses data provided by the FRED website, a service maintained by the Federal Reserve Bank of St. Louis.
+
+#### ....And Now, you are ready to get your data party started! 
+![](NerdReady.jpg)
