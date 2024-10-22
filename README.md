@@ -19,6 +19,7 @@ import datetime
 ## Retrieving the API From The FRED Site
 - Go to the site here - https://fredaccount.stlouisfed.org/apikeys
 - Request an API Key. They will ask for your email and information. However, the API is Free and you will receive it on the same day.
+- I recommend you use the documentation to understand how to retrieve the information. https://fred.stlouisfed.org/docs/api/fred/
 - Once you receive the API key, add it to the code like the example below. You might need at least two API codes depending on how much data you try to retrieve. 
    
 ```
@@ -35,8 +36,26 @@ This notebook retrieves and processes the following datasets for each state:
 5. **Median Household Income (Annual):** The median annual income of households in the state, reported in current dollars.
 6. **Labor Force Participation Rate (Monthly):** The percentage of the state's population that is either working or actively looking for work, reported monthly.
 
-#### Please note: Certain Data Series were not available across all states. For example, the State Minimum Wage Rate (Annual) was not available in Alabama. If data was missing for a specific state for a data series, it was skipped and noted on the output. 
+#### Please note: 
+- **Certain Data Series were not available across all states.** For example, the State Minimum Wage Rate (Annual) was not available in Alabama. If data was missing for a specific state for a data series, it was skipped and noted on the output.
+- **To find the series codes quickly, I recommend you do the following:**
+   - I recommend you look for the specific series on the site for one state. For example, you can find the state unemployment rate for California.
 
+     ```
+      'California': 'CAUR'
+     ```
+    - Then I would encourage you to go to ChatGPT and ask it to retrieve the other 49 state series codes.
+
+     ```
+      state_codes = {
+    'Alabama': 'ALUR',
+    'Alaska': 'AKUR',
+    'Arizona': 'AZUR',
+    'Arkansas': 'ARUR',
+    'California': 'CAUR',
+    'Colorado': 'COUR',
+     ```
+      
 ## Acknowledgments
 FRED API: This notebook uses data provided by the FRED website, a service maintained by the Federal Reserve Bank of St. Louis.
 
